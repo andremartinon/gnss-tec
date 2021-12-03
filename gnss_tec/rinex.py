@@ -724,7 +724,7 @@ class ObsFileV3(ObsFile):
 
         def code(current_codes, all_codes):
             union = set(current_codes) & set(all_codes)
-            return [all_codes.index(c) for c in union]
+            return sorted([all_codes.index(c) for c in union])
 
         def indices(b_priority, ot_indices):
             for first_band, second_band in b_priority:
